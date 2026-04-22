@@ -43,11 +43,11 @@ type_list = {}
 
 for pokemon in info:
         if pokemon['type'] == search_type:
-           print 
+        
            type_list.append(search_type)
 else: 
-     print("no pokemon are found, sorry :(")
-     print(type_list)
+        print("no pokemon are found, sorry :(")
+        print(type_list)
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 match = (input("search word:"))
 if match in info:
