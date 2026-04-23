@@ -1,7 +1,7 @@
 import json
 ## Open the JSON file of pokemon data
 pokedex = open("./pokedex.json", encoding="utf8")
-## create variable "data" that represents the enitre pokedex list
+## create variable "info" that represents the enitre pokedex list
 info = json.load(pokedex)
 print(info[0])
 
@@ -45,6 +45,7 @@ for pokemon in info:
         if pokemon['type'] == search_type:
         
            type_list.append(search_type)
+           print(type_list)
 else: 
         print("no pokemon are found, sorry :(")
         print(type_list)
