@@ -34,24 +34,35 @@ else:
              print(pokemon["name"]['chinese']) """
         
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
-for pokemon in (info):
+for pokemon in info:
    print(pokemon["type"])
 
-search_type = input("enter your pokemon's type.")
 
-type_list = {}
-
+type = input("enter your pokemon's type.")
+""" if type in pokemon['type']:
+    type_list.append(type) """
 for pokemon in info:
-        if pokemon['type'] == search_type:
-        
-           type_list.append(search_type)
-           print(type_list)
+    if type in pokemon['type']:
+       
+        print (pokemon["name"])
+
+        break
 else: 
-        print("no pokemon are found, sorry :(")
-        print(type_list)
+    print("no pokemon are found, sorry :(")
+
+
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
-match = (input("search word:"))
+""" match = (input("search word:"))
 if match in info:
-     print [match]["name"]
+     print [match]["name"] """
+for pokemon in info:
+    print (pokemon['name'])
+
+    name_search = input("Search the name of the pokemon")
+    if name_search in pokemon['name']:
+        print (pokemon["name"])
+
+    else: 
+        print("No pokemon found under this name.")
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
 
